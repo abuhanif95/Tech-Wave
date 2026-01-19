@@ -300,6 +300,70 @@ hr {
 .choose-card-description {
   color: rgb(159, 159, 159);
 }
+
+/* Feature Episode section */
+.episodes {
+  max-width: 1200px;
+  gap: 25px;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.episodes-title {
+  font-size: 45px;
+}
+
+.episode-cards {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.episode-card {
+  background-color: #2c075e;
+  border-radius: 20px;
+  border: none;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+iframe {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.episode-details {
+  display: flex;
+  padding: 15px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.episode-details h3 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.episode-details p {
+  color: rgb(159, 159, 159);
+}
+
+.episode-duration {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00ff88;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 /* Medium Devices */
 @media screen and (max-width: 992px) {
   .nav-btn {
@@ -313,8 +377,9 @@ hr {
   nav,
   .banner,
   .about,
-  .choose-container {
-    padding: 0 15px;
+  .choose-container,
+  .episodes {
+    padding: 20px 15px;
   }
 
   .banner-title {
@@ -354,7 +419,8 @@ hr {
   }
 
   .about-title,
-  .number-card h3 {
+  .number-card h3,
+  .choose-title {
     font-size: 40px;
   }
 
@@ -370,6 +436,10 @@ hr {
   .choose-cards .choose-card:nth-child(3),
   .choose-cards .choose-card:nth-child(4) {
     grid-column: span 1;
+  }
+
+  .episode-cards {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
