@@ -233,6 +233,73 @@ hr {
   color: rgb(186, 186, 186);
 }
 
+/* Choose Section */
+.choose {
+  width: 100%;
+  background-color: #230e3d;
+}
+
+.choose-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  gap: 35px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.choose-title {
+  font-size: 45px;
+}
+
+.choose-cards {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.choose-card {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 25px;
+  background-color: #351165;
+}
+
+.choose-cards .choose-card:nth-child(1) {
+  grid-row: span 2;
+}
+
+.choose-cards .choose-card:nth-child(2),
+.choose-cards .choose-card:nth-child(3),
+.choose-cards .choose-card:nth-child(4) {
+  grid-column: span 2;
+}
+
+.choose-card:nth-child(4) .choose-card-icon {
+  height: 60px;
+  width: 60px;
+}
+
+.choose-card:nth-child(4) .choose-card-icon img {
+  height: 100%;
+  width: 100%;
+}
+
+.choose-card-title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.choose-card-description {
+  color: rgb(159, 159, 159);
+}
 /* Medium Devices */
 @media screen and (max-width: 992px) {
   .nav-btn {
@@ -245,7 +312,8 @@ hr {
 
   nav,
   .banner,
-  .about {
+  .about,
+  .choose-container {
     padding: 0 15px;
   }
 
@@ -288,6 +356,20 @@ hr {
   .about-title,
   .number-card h3 {
     font-size: 40px;
+  }
+
+  .choose-container {
+    padding: 30px 15px;
+  }
+  .choose-cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .choose-cards .choose-card:nth-child(2),
+  .choose-cards .choose-card:nth-child(3),
+  .choose-cards .choose-card:nth-child(4) {
+    grid-column: span 1;
   }
 }
 
@@ -335,5 +417,10 @@ hr {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .choose-cards {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
   }
 }
