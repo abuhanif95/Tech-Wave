@@ -364,6 +364,60 @@ iframe {
   align-items: center;
 }
 
+/* Host section */
+.host {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.host-title {
+  font-size: 45px;
+}
+
+.host-card {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 35px;
+  background-color: #2c075e;
+  border-radius: 25px;
+}
+.host-details {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.host-name {
+  font-size: 25px;
+}
+
+.host-description {
+  font-size: 18px;
+  color: rgb(159, 159, 159);
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links li {
+  list-style: none;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid #6f2ec4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Medium Devices */
 @media screen and (max-width: 992px) {
   .nav-btn {
@@ -378,7 +432,8 @@ iframe {
   .banner,
   .about,
   .choose-container,
-  .episodes {
+  .episodes,
+  .host {
     padding: 20px 15px;
   }
 
@@ -420,7 +475,9 @@ iframe {
 
   .about-title,
   .number-card h3,
-  .choose-title {
+  .choose-title,
+  .episodes-title,
+  .host-title {
     font-size: 40px;
   }
 
@@ -440,6 +497,15 @@ iframe {
 
   .episode-cards {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .host-card {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .host-description {
+    font-size: 16px;
   }
 }
 
@@ -492,5 +558,22 @@ iframe {
   .choose-cards {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
+  }
+
+  .host-card {
+    flex-direction: column;
+    padding: 35px;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .host-details {
+    gap: 20px;
+  }
+
+  .social-links {
+    margin: 0 auto;
   }
 }
